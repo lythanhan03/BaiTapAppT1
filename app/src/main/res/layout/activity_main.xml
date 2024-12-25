@@ -1,0 +1,39 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <EditText
+        android:id="@+id/nhapso"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Nhập các số, cách nhau bằng dấu phẩy"
+        android:inputType="text" />
+
+    <Button
+        android:id="@+id/btn_tinhtoan"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Tính toán" />
+
+    <TextView
+        android:id="@+id/text_max"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Giá trị lớn nhất: "
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/text_min"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Giá trị nhỏ nhất: "
+        android:textSize="16sp" />
+
+    <Button
+        android:id="@+id/btn_go_to_html"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Chuyển sang HTML" />
+</LinearLayout>

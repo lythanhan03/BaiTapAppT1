@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Android WebView - Tính Toán Số</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+        }
+
+        h1 {
+            color: #4CAF50;
+            margin-bottom: 20px;
+        }
+
+        input[type="text"] {
+            width: 80%;
+            padding: 10px;
+            font-size: 16px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            color: white;
+            background-color: #4CAF50;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        #result {
+            margin-top: 20px;
+            font-size: 18px;
+            color: #333;
+        }
+
+        audio, video {
+            margin-top: 20px;
+        }
+
+        footer {
+            margin-top: 40px;
+            font-size: 14px;
+            color: #aaa;
+        }
+    </style>
+    <script>
+        function processNumbers() {
+            var input = document.getElementById('numbersInput').value;
+            if (input.trim() !== "") {
+                console.log("Calling Android processInput with input: " + input); // Log JavaScript
+                // Gọi phương thức Android để xử lý dữ liệu
+                Android.processInput(input);
+            } else {
+                alert("Vui lòng nhập dữ liệu!");
+            }
+        }
+
+        // Hàm để hiển thị kết quả từ Android
+        function showResult(max, min) {
+            console.log("Showing result in HTML: Max = " + max + ", Min = " + min); // Log kết quả
+            document.getElementById('result').innerHTML =
+                "Giá trị lớn nhất: <strong>" + max + "</strong><br>Giá trị nhỏ nhất: <strong>" + min + "</strong>";
+        }
+    </script>
+</head>
+<body>
+<h1>Nhập các số để tính toán</h1>
+<h2>Lý Thành An - K57 KMT</h2>
+<input type="text" id="numbersInput" placeholder="Nhập các số, cách nhau bởi dấu phẩy">
+<br>
+<button onclick="processNumbers()">Tính Toán</button>
+<div id="result"></div>
+
+<audio controls>
+    <source src="mp3/xyz.mp3" type="audio/mpeg">
+
+</audio>
+
+<video width="320" height="240" controls>
+    <source src="mp4/abc.mp4" type="video/mp4">
+
+</video>
+
+<footer>
+    <p>© 2024 Lý Thành An - K57 KMT. All rights reserved.</p>
+</footer>
+</body>
+</html>
